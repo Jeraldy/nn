@@ -1,9 +1,14 @@
-# Create NN from scratch , save it and serve it with Flask
+# THIS CODE DEMONSTRATES 
+1. HOW TO CREATE A NEURAL NETWORK WITH ONLY NUMPY ARRAY 
+2. HOW TO SAVE AND SERVE YOUR TRAINED MODEL USING FLASK
+
 ## Requirements
  - Python >=2.7 or >=3.4
  - Flask
-## Visualize dataset
-$ python visualize.py
+ ## Visuals
+- dataset.png is the visualization of the dataset
+- We train NN to find the decision boundary of this dataset 
+- After training (prediction.png) shows the NN learned decision boundary
 
 ![Image](nn_dataset.png)
 
@@ -11,20 +16,16 @@ $ python visualize.py
    You can think of the blue dots as male patients and the
    red dots as female patients, with the x- and y- axis being medical measurements.
 
-## 3 LAYER NN
-![Image](3nn.png)
-
 ## Train and save
+USAGE:
+1. To train NN and save(pickle) run
+ $ python nn_script.py
+ - The NN will be trained and saved in static folder
 
-$ python model.py
+2. To serve the model run
+ $ python app.py
+ - visit localhost:5000
 
- - After trainig: Your model will be saved in static folder
-
-![Image](nn_layers.png)
-## Running your app
-$ python app.py
-
-## Read More
-[Implementing a Neural Network from Scratch in Python](http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/)
-## Thanks
-- [Denny Britz](http://www.wildml.com/about/)
+## NOTE
+  - THIS IMPLEMENTATION WAS MADE FOR LEARNING PURPOSES, PLEASE DO NOT SUE ME FOR
+    INEFFICIENT IMPLEMENTATION.
