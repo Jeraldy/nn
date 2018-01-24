@@ -3,8 +3,7 @@
 2. HOW TO SAVE AND SERVE YOUR TRAINED MODEL USING FLASK
 
 ## Requirements
- - Python >=2.7 or >=3.4
- - Flask
+ - Flask & Numpy
  ## Visuals
 - dataset.png is the visualization of the dataset
 - We train NN to find the decision boundary of this dataset 
@@ -13,7 +12,8 @@
 ![Image](dataset.png)
 
 ## After training
-![Image](prediction.png)
+
+![Image](prediction.PNG)
 
 ## Train and save
 USAGE:
