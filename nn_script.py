@@ -3,13 +3,25 @@ import pandas as pd
 import sklearn,pickle
 import sklearn.datasets
 
+"""
+This is the implementation of a 3 layers NN using numpy array
+Number of input layers: 2
+Number of classes 2
+"""
+
 learning_rate = 0.0001
 reg_paramter = 0.0001
 num_input = 2
 num_classes = 2
 epoch = 2000
+num_hidden_layer_nodes = 6
 
 def data_set():
+    """
+    This fun generates sample X,y dataset
+    X: input array
+    Y: output array [0 or 1]
+    """
     X,y = sklearn.datasets.make_moons(200, noise=0.20)
     return X,y
 
@@ -33,13 +45,11 @@ def loss(model):
 
 
 def train_nn(nn_hdim):
-    # nn_hdim - number node in hidden layers
-
-    # Initialize the parameters to random values. We need to learn these.
+    # nn_hdim - number node in hidden layers 
     X,y = data_set()
     m = len(X)
-
     
+    # Initialize the parameters to random values. We need to learn these.
     W1 = np.random.randn(num_input, nn_hdim) / np.sqrt(num_input)
     b1 = np.zeros((1, nn_hdim))
 
@@ -93,7 +103,7 @@ def save_model(model):
 
 if __name__ == "__main__":
     #train_nn 
-    model = train_nn(6)
+    model = train_nn(num_hidden_layer_nodes)
 
     #Save nn_model
     save_model(model)
